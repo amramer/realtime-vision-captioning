@@ -1,9 +1,10 @@
-generate a logo related to this repo readme professional and when someone first see my readme they know what it will be 
+<p align="center">
+  <img src="assets/logo.png" alt="Realtime Vision Captioning Logo" width="330"><br><br>
+  <strong>🎥 Realtime Vision Captioning</strong><br>
+  Image Captioning · Visual Question Answering · Image Classification · Realtime Webcam
 
+</p>
 
-# 🎥 Realtime Vision Captioning
-
----
 
 ## Overview
 
