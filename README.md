@@ -1,6 +1,8 @@
 <p align="center">
   <strong>🎥 Realtime Vision Captioning</strong><br>
+  
   <img src="assets/logo.png" alt="Realtime Vision Captioning Logo" width="330"><br><br>
+  
   Image Captioning · Visual Question Answering · Image Classification · Realtime Webcam
 
 </p>
