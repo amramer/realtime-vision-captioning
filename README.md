@@ -154,3 +154,10 @@ For the realtime demo, webcam access is required.
 - The notebooks are intended for experimentation and demonstration purposes  
 
 ---
+
+## Contact
+
+For questions or collaboration, please contact:
+
+- amribrahim.amer@gmail.com
+
