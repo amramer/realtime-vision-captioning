@@ -2,15 +2,15 @@
   <img src="assets/logo.png" alt="Realtime Vision Captioning Logo" width="330"><br><br>
   <strong>🎥 Realtime Vision Captioning</strong><br>
   Image Captioning · Visual Question Answering · Image Classification · Realtime Webcam
-
 </p>
 
+---
 
 ## Overview
 
-This repository contains a small set of **Jupyter notebooks** demonstrating key computer vision and vision–language tasks using pretrained models. The notebooks progress from offline image understanding to a **realtime webcam application** that performs image captioning and image classification in realtime.
+This repository contains a curated set of **Jupyter notebooks** demonstrating core computer vision and vision–language capabilities using pretrained models. The notebooks progress from offline image understanding tasks to a **realtime webcam application** that performs image captioning and image classification on live video streams.
 
-Included tasks:
+### Covered tasks
 - Image captioning  
 - Visual question answering (VQA)  
 - Image classification  
@@ -20,7 +20,9 @@ Included tasks:
 
 ## Why This Matters
 
-Understanding visual data at a semantic level is critical for building intelligent, user-facing AI systems. Image captioning, visual question answering, and image classification enable machines to describe, reason about, and act on visual information. These capabilities are widely used in accessibility tools, interactive applications, and automated perception systems. This repository demonstrates how such models can be applied in both offline notebooks and realtime applications.
+Semantic understanding of visual data is a foundational capability for modern, user-facing AI systems. Tasks such as image captioning, visual question answering, and image classification allow machines to describe scenes, answer questions about visual content, and identify objects with high confidence.
+
+These techniques power real-world applications including accessibility tools, interactive AI interfaces, and automated perception systems. This repository demonstrates how such models can be applied both in **offline experimentation** and **realtime interactive settings**.
 
 ---
 
@@ -38,114 +40,109 @@ Understanding visual data at a semantic level is critical for building intellige
 
 ## Notebooks
 
-### 1- Image Captioning
+### 1 — Image Captioning
 
 **Notebook:** `01_image_captioning.ipynb`
 
 This notebook implements image captioning using **BLIP** from **Hugging Face**, generating natural language descriptions from images.
 
 - Supports local images and image URLs  
-- Uses **Gradio**, a lightweight web-based UI framework, to provide an interactive interface for testing and visualizing model outputs  
+- Uses **Gradio** to provide an interactive, browser-based interface  
 
-**Result:**  
-
- <p align="center">
-  <img src="assets/captioning-gradio.png" alt="gradio Captioning Demo" width="900">
-</p>
-<p align="center">
-  <em>Image cpationing in 'Gradio'</em>
-</p>
+**Result**
 
 <p align="center">
-  <img src="assets/task01-Image-captioning.png" alt="gradio Captioning Demo" width="700">
+  <img src="assets/captioning-gradio.png" alt="Gradio captioning demo" width="900">
 </p>
 <p align="center">
-  <em>Image captioning of a dog</em>
+  <em>Image captioning using Gradio</em>
+</p>
+
+<p align="center">
+  <img src="assets/task01-Image-captioning.png" alt="Image captioning example" width="700">
+</p>
+<p align="center">
+  <em>Caption generated for a sample image</em>
 </p>
 
 ---
 
-### 2- Visual Question Answering (VQA)
+### 2 — Visual Question Answering (VQA)
 
 **Notebook:** `02_visual_question_answering.ipynb`
 
-This notebook implements visual question answering using **BLIP (VQA)** from **Hugging Face**, enabling the model to answer natural language questions about image content.
+This notebook demonstrates visual question answering using **BLIP (VQA)**, enabling the model to answer natural language questions about image content.
 
-- Accepts an image and a free-form text question  
-- Produces a concise, human-readable answer  
+- Accepts an image and a free-form question  
+- Produces concise, human-readable answers  
 
-**Result:**  
+**Result**
 
 <p align="center">
-  <img src="assets/task02-vqa.png" alt="visual question answering" width="700">
+  <img src="assets/task02-vqa.png" alt="Visual question answering example" width="700">
 </p>
-<p align="center">
-  <em></em>
-</p>
-
 
 ---
 
-### 3- Image Classification
+### 3 — Image Classification
 
 **Notebook:** `03_image_classification_resnet50.ipynb`
 
-This notebook performs image classification using a pretrained **ResNet-50** model on the **ImageNet** dataset.
+This notebook performs image classification using a pretrained **ResNet-50** model trained on **ImageNet**.
 
 - Outputs Top-K class predictions with confidence scores  
-- Uses **Gradio** to provide an interactive interface for testing and visualization  
+- Uses **Gradio** for interactive testing and visualization  
 
-**Result:**  
+**Result**
 
 <p align="center">
-  <img src="assets/classification-gradio.png" alt="gradio classification Demo" width="900">
+  <img src="assets/classification-gradio.png" alt="Gradio image classification demo" width="900">
 </p>
 <p align="center">
-  <em>Image classification in 'Gradio'</em>
+  <em>Image classification using Gradio</em>
 </p>
 
 ---
 
-## ⭐ 4- Main Notebook — Realtime Webcam Caption + Classification
+## ⭐ 4 — Main Notebook: Realtime Webcam Captioning & Classification
 
 **Notebook:** `04_realtime_webcam_caption_and_classify.ipynb`
 
 ### Description
 
-This notebook shows how image captioning and image classification can be combined in a realtime webcam application and accessed through a simple browser interface.
+This notebook combines image captioning and image classification into a **realtime webcam application**, accessible directly through a web browser.
 
-- **Input:** Live webcam frames captured in the browser  
+- **Input:** Live webcam frames  
 - **Output:**  
   - A natural language caption describing the scene  
   - Top image classification predictions with confidence scores  
 
-The outputs update continuously as the camera view changes, making it easy to observe model behavior on live input.
+The outputs update continuously as the camera view changes, allowing real-time observation of model behavior.
 
-### Design
+### Design Highlights
 
 - Captioning runs on the full frame to capture scene context  
-- Classification runs on a center-focused crop to highlight the main object  
-- Frame throttling is used to balance responsiveness and performance  
-- A **Gradio interface** provides an accessible UI with adjustable options:
-  - Center-zoom level for classification  
+- Classification operates on a center-focused crop to emphasize the primary object  
+- Frame throttling balances responsiveness and performance  
+- A **Gradio interface** provides adjustable controls:
+  - Center zoom level  
   - Number of Top-K predictions  
   - Frame processing stride  
-  - Choice of running captioning, classification, or both  
+  - Enable captioning, classification, or both  
 
-**Result:**  
+**Result**
 
 <p align="center">
-  <img src="assets/realtime-app.gif" alt="realtime app demo" width="1000">
-</p>
-<p align="center">
-  <em></em>
+  <img src="assets/realtime-app.gif" alt="Realtime webcam demo" width="1000">
 </p>
 
 ---
 
 ## How to Run
 
-Each notebook is self-contained. Open the notebook and run all cells.  
+Each notebook is fully self-contained.  
+Open a notebook and run all cells in order.
+
 For the realtime demo, webcam access is required.
 
 ---
